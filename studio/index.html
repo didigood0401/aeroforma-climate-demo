@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1939ab">
+<title>Аэроформа — студия климатических решений</title>
+<meta name="description" content="Кондиционирование и вентиляция для квартир, домов и офисов в Москве. Сравните системы и подготовьте задание на замер.">
+<link rel="stylesheet" href="studio.css">
+<script defer src="studio.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header><div class="shell bar"><a class="brand" href="#main"><span class="mark" aria-hidden="true">≋</span> Аэроформа</a><nav aria-label="Основная навигация"><a href="#catalog">Каталог</a><a href="#plan">План объекта</a><a href="#guide">Журнал</a></nav><span class="region">Москва и область</span></div></header>
+<main id="main">
+<section class="shell hero">
+  <div class="hero-copy"><span class="eyebrow">Кондиционирование и вентиляция</span><h1>Климат<br>по вашему<br><em>плану.</em></h1><p>Где поставить блок, как спрятать трассу, откуда придёт свежий воздух? Начните с комнат, которые хотите обустроить.</p><div class="hero-actions"><a class="btn" href="#plan">Собрать план объекта</a><a class="under" href="#catalog">Посмотреть системы</a></div></div>
+  <figure class="hero-photo"><img src="atrium.webp" alt="Светлый атриум с остеклением и открытыми воздуховодами под потолком" fetchpriority="high"><figcaption>Открытая прокладка воздуховодов в атриуме</figcaption></figure>
+</section>
+<section class="catalog" id="catalog"><div class="shell"><div class="section-head"><div><span class="eyebrow">Каталог решений</span><h2>Что подойдёт объекту?</h2></div><p>У каждого решения свои требования к фасаду, потолку и обслуживанию. Отметьте два или три, чтобы увидеть разницу.</p></div>
+<div class="toolbar"><div class="filters" aria-label="Фильтр по задаче"><button type="button" data-filter="all" aria-pressed="true">Все</button><button type="button" data-filter="cool" aria-pressed="false">Охлаждение</button><button type="button" data-filter="air" aria-pressed="false">Свежий воздух</button></div><button class="outline" type="button" id="compare" disabled>Сравнить (0)</button></div>
+<div id="solutions" class="cards"></div><p id="catalog-status" class="status" role="status"></p></div></section>
+<section class="planner" id="plan"><div class="shell"><div class="section-head"><div><span class="eyebrow">Конфигуратор</span><h2>План вашего объекта</h2></div><p>Добавьте помещения и укажите условия монтажа. Готовое задание можно скачать и передать инженеру перед выездом.</p></div>
+<div class="workbench"><div class="work-form"><div class="pair"><label>Тип объекта<select id="property"><option>Квартира</option><option>Загородный дом</option><option>Офис</option></select></label><label>Состояние отделки<select id="stage"><option>Идёт ремонт</option><option>Чистовая отделка готова</option><option>До начала ремонта</option></select></label></div>
+<form id="room-form"><h3>Помещения</h3><div class="room-inputs"><label>Название<input id="room-name" maxlength="45" placeholder="Например, спальня" required></label><label>Площадь, м²<input type="number" id="room-area" min="1" max="2000" step="0.5" placeholder="18" required></label></div><label>Что требуется<select id="room-goal"><option>Охлаждение</option><option>Свежий воздух</option><option>Охлаждение и свежий воздух</option></select></label><button type="submit" class="outline">Добавить помещение</button></form>
+<label class="constraint"><input type="checkbox" id="facade"> На фасаде можно разместить только один наружный блок</label></div>
+<div class="brief"><span class="eyebrow">Задание на замер</span><h3 id="brief-title">Квартира</h3><p id="totals"></p><ul id="rooms"></ul><div id="picked"></div><div id="advice"></div><button class="btn pale" id="export" type="button" disabled>Скачать задание</button><small>Файл формируется на вашем устройстве. Контакты вводить не нужно.</small></div></div><p id="plan-status" class="status" role="status"></p></div></section>
+<section id="guide" class="shell guide"><figure><img src="diffuser.webp" alt="Щелевой диффузор встроен между деревянными потолочными рейками" loading="lazy"></figure><div><span class="eyebrow">Журнал монтажа</span><h2>До того, как<br>закрыли потолок.</h2><details open><summary>Что согласовать с дизайнером?</summary><p>Нанесите на план места решёток, вывод конденсата и люки для обслуживания. Уточните, можно ли снять фильтр после установки шкафа или карниза.</p></details><details><summary>Что взять на замер в готовой квартире?</summary><p>Подготовьте план комнат, фотографии фасада и места наружного блока. Отметьте, где спите и работаете, чтобы обсудить направление потока и видимые участки трассы.</p></details><details><summary>Как подготовить офис к обслуживанию?</summary><p>Соберите модели установок и даты прошлых работ. Отметьте помещения, где шумит блок или стало душно, и часы, когда инженер сможет открыть потолочные люки.</p></details></div></section>
+</main><footer><div class="shell"><span class="brand">Аэроформа</span><span>Демонстрационная концепция · Диана Латыпова</span><a href="#main">Наверх</a></div></footer>
+<dialog id="sheet" aria-labelledby="sheet-title"><div class="sheet-top"><span class="eyebrow">Каталог решений</span><button class="close" type="button" aria-label="Закрыть">×</button></div><h2 id="sheet-title"></h2><div id="sheet-body"></div></dialog>
+</body></html>
